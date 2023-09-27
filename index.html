@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма для отправки данных</title>
+    <link rel="stylesheet" type="text/css" href="./static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Заявка на регистрацию</h1>
+      <form action="/submit" method="post">
+        <label for="contract_number">Номер договора:</label>
+        <input
+          type="text"
+          id="contract_number"
+          name="contract_number"
+          required
+        />
+
+        <label>Курс:
+          <input type="radio" name="course_name" value="Основной"> Основной
+          <input type="radio" name="course_name" value="Углубленный"> Углубленный
+        </label>
+        
+
+        <label for="parent_name">ФИО Родителя:</label>
+        <input type="text" id="parent_name" name="parent_name" required />
+
+        <label for="children_name">ФИО Ребёнка:</label>
+        <input type="text" id="children_name" name="children_name" required />
+
+        <label for="parent_phone">Телефон Родителя:</label>
+        <input type="tel" id="parent_phone" name="parent_phone" required />
+
+        <label for="parent_email">Email родителя:</label>
+        <input type="email" id="parent_email" name="parent_email" required />
+
+        <label for="passport_series">Серия паспорта:</label>
+        <input
+          type="text"
+          id="passport_series"
+          name="passport_series"
+          required
+        />
+
+        <label for="passport_number">Номер паспорта:</label>
+        <input
+          type="text"
+          id="passport_number"
+          name="passport_number"
+          required
+        />
+
+        <label for="passport_issue_date">Дата выдачи паспорта:</label>
+        <input
+          type="date"
+          id="passport_issue_date"
+          name="passport_issue_date"
+          required
+        />
+
+        <label for="passport_place_of_issue">Кем выдан паспорт:</label>
+        <input
+          type="text"
+          id="passport_place_of_issue"
+          name="passport_place_of_issue"
+          required
+        />
+
+        <label for="registration_address">Адрес регистрации:</label>
+        <textarea
+          id="registration_address"
+          name="registration_address"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+
+        <input type="submit" value="Отправить" />
+      </form>
+    </div>
+  </body>
+</html>
