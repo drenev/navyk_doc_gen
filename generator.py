@@ -47,4 +47,4 @@ def create_new_file(input_dict):
                     while key in cell.text:
                         cell.text = cell.text.replace(key, input_dict[key])
     doc_name = str(input_dict['parent_name']) + '__' + str(input_dict['timestamp'])
-    doc.save(f'{doc_name}.docx')
+    doc.save(f'docs/{doc_name}.docx')

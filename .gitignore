@@ -1,6 +1,7 @@
 *.docx
 !file.docx
 .idea/
+*.sh
 webprojenv/
 # Byte-compiled / optimized / DLL files
 __pycache__/

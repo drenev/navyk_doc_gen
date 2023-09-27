@@ -16,12 +16,10 @@ def submit():
     form_data['timestamp'] = time.time() * 1000000
     for field_name, field_value in request.form.items():
         form_data[field_name] = field_value
-    print(form_data)
     if form_data:
         create_new_file(create_dict(form_data))
 
-    doc_name = str(form_data['parent_name']) + '__' + str(form_data['timestamp']) + '.docx'
-    print(doc_name)
+    doc_name = 'docs/' + str(form_data['parent_name']) + '__' + str(form_data['timestamp']) + '.docx'
 
     return send_file(doc_name, as_attachment=True)
 
